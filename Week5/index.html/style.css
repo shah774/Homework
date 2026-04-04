@@ -1,0 +1,65 @@
+ /* In the styles.css file, fix the styling for the site, and create a media query that fixes the site to correctly display on the "iPhone 6/7/8" view in DevTools */
+ /* The #aboutMe <ul> at the top of the page <img> tags <div> ts links */
+ /* <img> tags should be responsive and not overflow their containers */
+/* <div> elements should have appropriate padding and margin */
+/* The layout should stack vertically on smaller screens */
+html {
+  background-color: antiquewhite;
+}
+body {
+  text-align: center;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-size: 50px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+div {
+  border: 2px solid burlywood;
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+#introPic {
+  float: left;
+  width: 45%;
+}
+#about-me {
+  float: right;
+  width: 45%;
+  list-style-position: inside;
+  padding: 0;
+}
+#about-me > li {
+  padding: 5px;
+}
+#pro {
+  width: 100%;
+}
+body::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+@media (max-width: 375px) {
+  h1 {
+    font-size: 32px;
+  }
+  body {
+    font-size: 16px;
+  }
+  #introPic,
+  #about-me {
+    float: none;
+    width: 100%;
+  }
+  div {
+    margin: 5px;
+    padding: 8px;
+  }
+}
